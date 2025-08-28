@@ -79,6 +79,12 @@ The difference for both encoders compared to the original image for an example i
 
 <img width="220" height="160" alt="compare-aencoder-convencoder-original" src="https://github.com/user-attachments/assets/33f56701-70ff-41df-9ac5-abc495f21e2b" />
 
+### Autoencoder embeddings
+
+As the autoencoder compresses data to two dimensions it is fairly simple to visualize it.
+
+
+
 ### PCA and autoencoders
 
 The whole idea of compression -representing data with the least possible features- is comparable with the idea of principal component analysis (PCA).
@@ -87,7 +93,9 @@ The PCA plot for a part of the MNIST dataset projected to two dimensions is very
 
 <img width="1500" height="500" alt="compare-pca-autoencoder" src="https://github.com/user-attachments/assets/f8dac2f4-ee62-4ed8-8c33-970540a1847a" />
 
+### t-SNE
 
+t-SNE (t-distributed Stochastic Neighbor Embedding) is an unsupervised non-linear dimensionality reduction technique for data exploration and visualizing high-dimensional data. Non-linear dimensionality reduction means that the algorithm allows us to separate data that cannot be separated by a straight line.
 
 
 
