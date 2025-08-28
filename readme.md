@@ -79,7 +79,11 @@ The difference for both encoders compared to the original image for an example i
 
 <img width="220" height="160" alt="compare-aencoder-convencoder-original" src="https://github.com/user-attachments/assets/33f56701-70ff-41df-9ac5-abc495f21e2b" />
 
+### PCA and autoencoders
 
+The whole idea of compression -representing data with the least possible features- is comparable with the idea of principal component analysis (PCA).
+
+The PCA plot for a part of the MNIST dataset projected to two dimensions is very comparable to the plot for the autoencoder that reduces MNIST-data to two dimensions.
 
 <img width="1500" height="500" alt="compare-pca-autoencoder" src="https://github.com/user-attachments/assets/f8dac2f4-ee62-4ed8-8c33-970540a1847a" />
 
