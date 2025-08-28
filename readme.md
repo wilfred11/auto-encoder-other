@@ -85,6 +85,7 @@ The difference for both encoders compared to the original image for an example i
 
 As the autoencoder compresses data to two dimensions it is fairly simple to visualize it.
 
+<img width="640" height="480" alt="graph_" src="https://github.com/user-attachments/assets/e1e0e476-ca1d-49e7-829d-22d3afadd0ac" />
 
 
 ### PCA and autoencoders
