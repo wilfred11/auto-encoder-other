@@ -24,7 +24,7 @@ random.seed(0)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 generate_anim = False
-do=8
+do=7
 model = AEncoder()
 training_iterations= 25000
 evaluation_iterations = 250
@@ -166,7 +166,8 @@ if do==7:
 
     fig.subplots_adjust(wspace=0, hspace=0)
 
-    plt.show()
+    plt.savefig("graph/generate_from_median.png")
+
 
 if do==8:
     ae_model = AEncoder()
