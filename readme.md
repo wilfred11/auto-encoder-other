@@ -34,7 +34,7 @@ self.decoder = nn.Sequential(
         )
 ```
 
-In this case the MNIST-dataset will be used. This dataset contains images of digits. As this is an image dataset a convolutional auto-encoder will be more succesful.
+In this case the MNIST-dataset will be used. This dataset contains images of numerical digits. As this is an image dataset a convolutional auto-encoder will be more succesful.
 
 ### A convolutional autoencoder
 
@@ -102,7 +102,7 @@ t-SNE (t-distributed Stochastic Neighbor Embedding) is an unsupervised non-linea
 
 <img width="640" height="480" alt="ConvolutionalAEncoder" src="https://github.com/user-attachments/assets/9f66cdb6-1c76-407c-b496-72f7233a4582" />
 
-
+The convolutional encoder shows a very good separation between classes.
 
 
 
