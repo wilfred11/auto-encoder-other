@@ -104,5 +104,12 @@ t-SNE (t-distributed Stochastic Neighbor Embedding) is an unsupervised non-linea
 
 The convolutional encoder shows a very good separation between classes.
 
+### Generating from the embeddings
+
+
+
+<img width="750" height="250" alt="generate_from_median" src="https://github.com/user-attachments/assets/dda29da1-a56e-4b25-b6e0-c810ac95a7e9" />
+
+
 
 
