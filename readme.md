@@ -100,6 +100,7 @@ The PCA plot for a part of the MNIST dataset projected to two dimensions is very
 
 t-SNE (t-distributed Stochastic Neighbor Embedding) is an unsupervised non-linear dimensionality reduction technique for data exploration and visualizing high-dimensional data. Non-linear dimensionality reduction means that the algorithm allows us to separate data that cannot be separated by a straight line.
 
+<img width="640" height="480" alt="ConvolutionalAEncoder" src="https://github.com/user-attachments/assets/9f66cdb6-1c76-407c-b496-72f7233a4582" />
 
 
 
