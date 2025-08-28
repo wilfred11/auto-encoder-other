@@ -1,0 +1,6 @@
+/data/MNIST/**
+/.idea/inspectionProfiles/**
+/.idea/**
+/intermediate/**
+poetry.lock
+poetry.toml
