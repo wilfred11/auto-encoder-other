@@ -17,7 +17,7 @@ self.encoder=nn.Sequential(
         )
 ```
 
-And the decoder.
+And the decoder. The decoder typically is the opposite of the encoder.
 
 ```
 self.decoder = nn.Sequential(
@@ -32,11 +32,48 @@ self.decoder = nn.Sequential(
         )
 ```
 
-Using these parts information can be encoded or decoded. After decoding the information should be almost identical to the information being encoded.
+In this case the MNIST-dataset will be used. This dataset contains images of digits. As this is an image dataset a convolutional auto-encoder will be more succesful.
 
-Loss is the difference between the original image and the decoded or reconstructed image.
+### A convolutional autoencoder
+
+In a convolutional autoencoder the encoder looks like this.
+
+```
+self.encoder_conv = nn.Sequential(
+            nn.Conv2d(in_channels=in_channels, out_channels=8, kernel_size=3, stride=2, padding=1, bias=False),
+            nn.BatchNorm2d(8),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=2, padding=1, bias=False),
+            nn.BatchNorm2d(16),
+            nn.ReLU(),
+            nn.Conv2d(in_channels=16, out_channels=self.bottleneck, kernel_size=3, stride=2, padding=1),
+        )
+```
+
+And the decoder.
+
+```
+self.decoder_conv = nn.Sequential(
+            nn.ConvTranspose2d(in_channels=self.bottleneck, out_channels=16, kernel_size=3, stride=2, padding=1,
+                               output_padding=1),
+            nn.BatchNorm2d(16),
+            nn.ReLU(),
+            nn.ConvTranspose2d(in_channels=16, out_channels=8, kernel_size=3, stride=2, padding=1, output_padding=1),
+            nn.BatchNorm2d(8),
+            nn.ReLU(),
+            nn.ConvTranspose2d(in_channels=8, out_channels=in_channels, kernel_size=3, stride=2, padding=1,
+                               output_padding=1),
+            nn.Sigmoid()
+        )
+```
+
+Using the decoder and the encoder information can be encoded or decoded. After decoding the information should be almost identical to the information being encoded.
+
+Loss is the difference between the original image and the decoded or reconstructed image. In this case the mean is taken, as images of 32*32 tend to have to big loss values.
 
 ```loss = torch.mean((images - reconstruction) ** 2)```
+
+### 
 
 
 

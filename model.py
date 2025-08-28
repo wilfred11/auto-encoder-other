@@ -76,17 +76,13 @@ class ConvolutionalAEncoder(nn.Module):
         self.in_channels = in_channels
 
         self.encoder_conv = nn.Sequential(
-
             nn.Conv2d(in_channels=in_channels, out_channels=8, kernel_size=3, stride=2, padding=1, bias=False),
             nn.BatchNorm2d(8),
             nn.ReLU(),
-
             nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=2, padding=1, bias=False),
             nn.BatchNorm2d(16),
             nn.ReLU(),
-
             nn.Conv2d(in_channels=16, out_channels=self.bottleneck, kernel_size=3, stride=2, padding=1),
-
         )
 
         self.decoder_conv = nn.Sequential(
@@ -94,15 +90,12 @@ class ConvolutionalAEncoder(nn.Module):
                                output_padding=1),
             nn.BatchNorm2d(16),
             nn.ReLU(),
-
             nn.ConvTranspose2d(in_channels=16, out_channels=8, kernel_size=3, stride=2, padding=1, output_padding=1),
             nn.BatchNorm2d(8),
             nn.ReLU(),
-
             nn.ConvTranspose2d(in_channels=8, out_channels=in_channels, kernel_size=3, stride=2, padding=1,
                                output_padding=1),
             nn.Sigmoid()
-
         )
 
     def forward_enc(self, x):
