@@ -75,7 +75,10 @@ Loss is the difference between the original image and the decoded or reconstruct
 
 ### Compare results of autoencoders with the original image
 
+The difference for both encoders compared to the original image for an example is visible below.
 <img width="320" height="240" alt="compare-aencoder-convencoder-original" src="https://github.com/user-attachments/assets/33f56701-70ff-41df-9ac5-abc495f21e2b" />
+
+
 
 
 
