@@ -114,6 +114,8 @@ Numbers 4 and 5 are bit unclear.
 
 ### Interpolating
 
+Interpolating over a limited number of values and points shows the flaws of the autoencoder. Places containing white generate noisy digits.
+
 ![interpolate.png](graph/AEncoder/interpolate.png)
 
 
